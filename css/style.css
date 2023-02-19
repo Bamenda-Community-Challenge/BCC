@@ -1,0 +1,538 @@
+@import url("https://fonts.googleapis.com/css2?family=Open+Sans:wght@300;400;500;600;700;800&family=Roboto:wght@100;300;400;500;700;900&display=swap");
+/******************************************************** timeline section ********************************************************/
+html {
+  scroll-behavior: smooth;
+}
+* {
+  padding: 0;
+  margin: 0;
+  /* font-family: 'Open Sans', sans-serif; */
+  font-family: "Roboto", sans-serif;
+  box-sizing: border-box;
+}
+body {
+  font-size: 16px;
+  line-height: 1.5;
+  font-weight: 400;
+  scroll-behavior: smooth;
+}
+h1,
+h2 {
+  font-family: "Open Sans", sans-serif;
+}
+hr{
+  max-width: 90%;
+  margin: auto;
+  color: #dadce0;
+}
+p {
+  line-height: 30px;
+}
+/******************************************************** header section ********************************************************/
+.hero {
+  width: 100%;
+
+  min-height: 100vh;
+  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)),
+    url(../images/background-pic.jpg);
+  background-size: cover;
+  background-position: center;
+  position: relative;
+}
+nav {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  padding: 20px 6%;
+  align-items: center;
+  justify-content: space-between;
+  display: flex;
+}
+.flex-row {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  justify-content: space-between;
+}
+nav .nav-logo {
+  cursor: pointer;
+  color: #fff;
+  width: 120px;
+  font-weight: 900;
+}
+nav ul li {
+  font-size: 20px;
+  margin: 5px 15px;
+  display: inline-block;
+  list-style: none;
+  font-weight: 700;
+}
+nav ul li a {
+  text-decoration: none;
+  color: #fff;
+}
+
+.header {
+  padding: 0 50px;
+  width: 85%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  font-size: 30px;
+  text-align: center;
+  color: #fff;
+}
+.title {
+  font-size: 50px;
+  -webkit-text-stroke: 1px #fff;
+  color: transparent;
+  text-align: center;
+  background-image: linear-gradient(#fff, #fff);
+  background-repeat: no-repeat;
+  -webkit-background-clip: text;
+  background-position: -1300px 0;
+  animation: backcolor 10s linear infinite alternate;
+}
+@keyframes backcolor {
+  100% {
+    background-position: 0 0;
+  }
+}
+
+.social-media i {
+  color: #fff;
+  margin: 5px;
+}
+nav .fa-bars {
+  display: none;
+}
+
+.active {
+  position: relative;
+}
+.active::after {
+  content: "";
+  background: #fff;
+  width: 25px;
+  height: 2px;
+  position: absolute;
+  left: 50%;
+  transform: translateX(-50%);
+  bottom: -12px;
+  border-radius: 2px;
+}
+
+@media only screen and (max-width: 700px) {
+.header {
+  line-height: 1;
+}
+  nav .nav-logo {
+    position: fixed;
+    top: 4%;
+    left: 6%;
+  }
+  nav {
+    position: fixed;
+    top: 0;
+    z-index: 100;
+    display: inline-block;
+    width: 100%;
+    padding: 100px 6% 0;
+    background: #000;
+    text-align: right;
+    max-height: 100px;
+    overflow: hidden;
+    transition: max-height 1s;
+  }
+  nav ul li {
+    display: block;
+    margin: 10px 0;
+  }
+  nav .fa-bars {
+    display: block;
+    position: fixed;
+    top: 4%;
+    right: 7%;
+    color: #fff;
+    font-size: 28px;
+    cursor: pointer;
+  }
+  .hidemenu {
+    max-height: 900px;
+  }
+  .social-media {
+    display: inline-block;
+    margin: 15px 0 30px;
+  }
+  .active::after {
+    left: 500px;
+    transform: translate(0, 50%);
+    bottom: 50%;
+  }
+}
+
+section {
+  max-width: 90%;
+  margin: 100px auto;
+}
+/******************************************************** about us section ********************************************************/
+.about-section{
+  /* margin: 100px  auto; */
+}
+.about-section .about-img,
+.about-section .info-section {
+  width: 50%;
+  padding: 0 25px 0 0;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+.about-section .about-img img {
+  width: 100%;
+}
+
+@media screen and (max-width: 1200px) {
+  /* .about-section{
+    flex-direction: column;
+  }
+    .about-section .about-img,.about-section .info-section {
+        width: 100%;
+        padding: 15px 0;
+  } */
+}
+
+@media screen and (max-width: 1000px) {
+  /* .about-section {
+    background-size: 100%;
+    padding: 100px 40px;
+  } */
+
+  .about-section {
+    flex-direction: column;
+  }
+
+  .about-section .about-img,
+  .about-section .info-section {
+    width: 100%;
+    padding: 15px 0;
+  }
+}
+
+@media screen and (max-width: 600px) {
+  section {
+    /* margin: 0 auto; */
+  }
+  .about-section {
+    background-size: 100%;
+    /* padding: 50px 0px; */
+  }
+  .about-section .text{
+    text-align: justify;
+    
+    }
+}
+/******************************************************** register section ********************************************************/
+section.register {
+  background: #2e364a;
+  padding: 100px 0;
+  /* max-width: 100%; */
+}
+section .register-section{
+  max-width: 90%;
+  margin: auto;
+  color: #fff;
+
+}
+section .register-section .register-info{
+  width: 70%;
+}
+.register-section button{
+  padding: 15px 50px;
+  background-color:#1A73E8;
+  color: #fff;
+  border-radius: 50px;
+  border: 1px solid #1A73E8;
+}
+@media only screen and (max-width: 700px) {
+section.register {
+  max-width: 100%;
+}
+section .register-section .register-info{
+  width: 100%;
+}
+section .register-section {
+  justify-content: center;
+  gap: 20px;
+  align-items: center;
+  text-align: center;
+}
+}
+/******************************************************** Steps section ********************************************************/
+.steps .row{
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 20px;
+}
+.steps .row .col-3{
+  border-radius: 15px;
+    border: 1px solid #dadce0;
+  /* padding-left: 10px; */
+}
+.steps .row .col-3 {
+  padding: 10px;
+}
+.steps .row .date{
+  display: flex;
+  align-items: center;
+
+}
+.steps .row .date .icon{
+  background-color: #1A73E8;
+  padding: 10px;
+  border-radius: 50%;
+  margin-right: 20px ;
+}
+.steps .row .date i{
+  color: #fff;
+  font-size: 20px;
+}
+.steps .row .date {
+  padding: 20px 0;
+}
+.steps .row .date h3{
+  font-size: 20px;
+}
+@media only screen and (max-width: 700px) {
+.steps .row {
+  grid-template-columns: 1fr;
+}
+}
+/******************************************************** timeline section ********************************************************/
+section.timeline{
+  background: #2e364a;
+  padding: 100px 0;
+  /* max-width: 100%; */
+}
+section .timeline-header{
+  max-width: 90%;
+  text-align: center;
+  margin: auto;
+  color: #fff;
+}
+.timeline-section {
+  position: relative;
+  max-width: 90%;
+  margin: 100px auto;
+
+}
+.container{
+  padding: 10px 50px;
+  position: relative;
+  width: 50%;
+  animation: movedown 1s linear forwards;
+  opacity: 0;
+}
+@keyframes movedown{
+  0%{
+    opacity: 1;
+    transform: translate(-30px);
+  }
+  100%{
+    opacity: 1;
+    transform: translateY(0px);
+  }
+}
+.container:nth-child(1){
+  animation-delay: 0s;
+}
+.container:nth-child(2) {
+  animation-delay: 1s;
+}
+.container:nth-child(3) {
+  animation-delay: 2s;
+}
+.container:nth-child(4) {
+  animation-delay: 3s;
+}
+
+.text-box{
+  padding: 20px 30px;
+  background-color: #fff;
+  position: relative;
+  border-radius: 6px;
+  font-size: 15px;
+}
+.left-container{
+  left: 0;
+}
+.right-container{
+  left: 50%;
+}
+.container .step{
+  position: absolute;
+  width: 40px;
+  border-radius: 50%;
+  right: -20px;
+  top: 32px;
+  z-index: 10;
+
+  background-color: #fff;
+  text-align: center;
+  height: 40px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.right-container .step{
+  left: -20px;
+  /* z-index: 99; */
+}
+
+.timeline-section::after{
+  content: '';
+  position: absolute;
+  width: 6px;
+  height: 100%;
+  background: #fff;
+  top: 0;
+  left: 50%;
+  margin-left: -3px;
+  z-index: 1;
+  animation: moveline 6s linear forwards;
+}
+@keyframes moveline{
+  0%{
+    height: 0;
+  }
+  100%{
+    height: 100%;
+  }
+}
+
+.text-box h2{
+  font-weight: 600;
+}
+.text-box small{
+  display: inline-block;
+  margin-bottom: 15px;
+}
+.left-container-arrow{
+  height: 0;
+  width: 0;
+  position: absolute;
+  top: 28px;
+  z-index: 1;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-left: 15px solid #fff;
+  right: -15px;
+}
+
+.right-container-arrow {
+  height: 0;
+  width: 0;
+  position: absolute;
+  top: 28px;
+  z-index: 1;
+  border-top: 15px solid transparent;
+  border-bottom: 15px solid transparent;
+  border-right: 15px solid #fff;
+  left: -15px;
+}
+
+@media screen and (max-width:700px){
+section.timeline {
+  max-width: 100%;
+}
+  .timeline-section{
+    margin: 50px auto;
+  }
+  .timeline-section::after{
+    left: 31px;
+  }
+  .container{
+    width: 100%;
+    padding-left: 80px;
+    padding-right: 25px;
+  }
+  .text-box{
+    /* font-size: 13px; */
+  }
+  .text-box small{
+    margin-bottom: 10px;
+  }
+  .right-container{
+    left: 0;
+  }
+  .left-container .step, .right-container .step{
+    left: 10px;
+  }
+  .left-container-arrow, .right-container-arrow{
+    border-right: 15px solid #fff;
+    border-left: 0;
+    left: -15px;
+  }
+}
+
+
+.winners-page section{
+  max-width: 90%;
+}
+.top-3 .row{
+
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  justify-content: space-between;
+  gap: 20px;
+}
+
+.top-3 .row .col-3{
+  border-radius: 15px;
+  border: 1px solid #dadce0;
+}
+.top-3 .row .col-3 iframe{
+  border-radius: 15px 15px 0 0;
+    width: 100%;
+}
+
+.top-3 .row .col-3 .info {
+  padding: 20px;
+}
+@media screen and (max-width:700px) {
+.top-3 .row {
+    grid-template-columns: 1fr;
+  }
+.winners-page section.register {
+  max-width: 100%;
+}
+.top-3 .row .col-3 .info {
+  text-align: justify;
+}
+}
+
+.gallery-container{
+  display: flex;
+  flex-direction: column;
+}
+
+.gallery-container .box{
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  /* align-items: center; */
+
+}
+
+.gallery-container .box .img-gallery{
+  display: flex;
+  flex-direction: column;
+  width: 32.5%;
+}
+
+.gallery-container .box .img-gallery img{
+  width: 100%;
+  padding-bottom: 10px;
+  border-radius: 5px;
+}
